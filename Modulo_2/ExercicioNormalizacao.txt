@@ -1,0 +1,100 @@
+banco de dados softblue
+
+----------------------------------------
+
+tabela instrutor
+
+id
+
+nome
+
+telefone
+
+PRIMARY KEY id
+
+----------------------------------------
+
+tabela curso
+
+id
+
+instrutor
+
+nome
+
+tipo 
+
+preco
+
+PRIMARY KEY (id)
+
+FOREIGN KEY instrutor -> tabela instrutor id
+
+----------------------------------------
+
+tabela aluno
+
+id
+
+curso_matriculados
+
+nome
+
+endereço
+
+email
+
+PRIMARY KEY id
+
+FOREIGN KEY curso_matriculado -> tabela curso id
+
+----------------------------------------
+
+tabela pedido
+
+id
+
+aluno_id
+
+curso_id
+
+curso_preco
+
+dataehora
+
+pagamento
+
+PRIMARY KEY
+
+FOREIGN KEY aluno_id -> tabela aluno id
+
+FOREIGN KEY curso_id -> tabela curso id
+
+FOREIGN KEY curso_preco -> tabela curso preco
+
+----------------------------------------
+
+indice tabela aluno
+
+curso_matriculado -> tabela curso id
+
+----------------------------------------
+
+indice tabela curso
+
+FOREIGN KEY instrutor -> tabela instrutor id
+
+----------------------------------------
+
+indice pedido
+
+aluno_id -> tabela aluno id
+
+curso_id -> tabela curso id
+
+----------------------------------------
+
+
+
+
+
