@@ -1,0 +1,71 @@
+DATABASE dba_softblue;
+
+----------------------------------------
+
+tabela instrutor
+
+id int unsigned not null auto_increment,
+
+nome varchar(45) not null,
+
+telefone 
+
+PRIMARY KEY id
+
+----------------------------------------
+
+tabela curso
+
+id int unsigned not null auto_increment,
+
+nome varchar(15) not null,
+
+instrutor
+
+tipo varchar(15) not null,
+
+preco double unsigned not null,
+
+PRIMARY KEY (id)
+
+FOREIGN KEY instrutor -> tabela instrutor id
+
+----------------------------------------
+
+tabela aluno
+
+id int unsigned not null auto_increment,
+
+cursos_matriculados int unsigned not null default '',
+
+nome varchar(45) not null,
+
+endereço varchar(45) not null,
+
+email varchar(45) not null,
+
+PRIMARY KEY (id),
+
+CONSTRAINT fk_aluno_
+
+
+----------------------------------------
+
+tabela pedido
+
+curso
+
+dataehora
+
+
+
+
+
+
+
+
+
+
+
+
+
